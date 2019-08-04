@@ -1,0 +1,31 @@
+{
+  "name": "@mydoclaw/querystring-json",
+  "version": "0.0.1",
+  "description": "QueryString to JSON parser. One that helps in keeping the integers and float intact automatically. Works for simple query strings where every element is used just once.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mydoclaw/querystring-json.git"
+  },
+  "engines": {
+  "node": ">=10.0.0"
+},
+"scripts": {
+  "test": "mocha --reporter spec"
+},
+
+  "keywords": [
+    "querystring",
+    "json",
+    "parser"
+  ],
+  "author": "mydoclaw <mydoclaw@rediffmail.com> (https://github.com/mydoclaw/querystring-json)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mydoclaw/querystring-json/issues"
+  },
+  "homepage": "https://github.com/mydoclaw/querystring-json#readme"
+}
