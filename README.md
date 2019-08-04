@@ -51,7 +51,7 @@ QueryString to JSON parser. One that helps in keeping the integers and float int
 	var output = queryStringToJson("?search=india&value=1&balance=99.9&myemail=myemail@mymail.com");
 	console.log(output);
 		
-	output should be {"search":"india","value":1,"balance":99.9,"email":"myemail@mymail.com"}	
+	output should be {"search":"india","value":1,"balance":99.9,"myemail":"myemail@mymail.com"}	
 	
 
 	
