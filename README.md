@@ -53,13 +53,17 @@ QueryString to JSON parser. One that helps in keeping the integers and float int
 	var queryStringToJson = require('@mydoclaw/querystring-json');
 
 
-	
+
 	var server = http.createServer(function (request, response) {
 	  var stringData = url.parse(request.url, true).search;
-	  response.writeHead(200, {"Content-Type": "text/plain"});
-	  response.write(queryStringToJson(stringData));
-	  response.end();
 
+	  if ( typeof stringData !== 'undefined' && stringData ){
+		stringData=decodeURIComponent(stringData);
+		response.writeHead(200, {"Content-Type": "text/plain"});
+		response.write(queryStringToJson(stringData));
+		response.end();
+	  }  
+	  response.end();
 	});
 
 	server.listen(8000);
