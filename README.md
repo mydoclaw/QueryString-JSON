@@ -8,15 +8,39 @@ QueryString to JSON parser. One that helps in keeping the integers and float int
   `npm install @mydoclaw/querystring-json`
 
 ## Usage
+	
+	var queryStringToJson = require('@mydoclaw/querystring-json');
+	var output = queryStringToJson("?value=1");
+	console.log(output);
+	
+	output should be {"value":1}
 
-    var numFormatter = require('@mydoclaw/querystring-json');
-
-    var formattedNum = numFormatter(35666);
+	var queryStringToJson = require('@mydoclaw/querystring-json');
+	var output = queryStringToJson("?search=IN");
+	console.log(output);
+	
+	output should be  {"search": "IN"}
+	
+	var queryStringToJson = require('@mydoclaw/querystring-json');
+	var output = queryStringToJson("?search=india&value=1&apikey=applekey");
+	console.log(output);
   
+	output should be {"search": "india","value":1,"apikey": "applekey"}
   
-  Output should be `35,66`
+	var queryStringToJson = require('@mydoclaw/querystring-json');
+	var output = queryStringToJson("?search=india&value=1&apikey=applekey");
+	console.log(output);
+	
+	output should be {"search": "india","value":1,"apikey": "applekey"}
 
 
+	var queryStringToJson = require('@mydoclaw/querystring-json');
+	var output = queryStringToJson("?search=india&value=1&balance=99.9&apikey=applekeyy");
+	console.log(output);
+		
+	output should be {"search": "india","value":1,"balance":99.9,"apikey": "applekey"}
+	
+	
 ## Tests
 
   `npm test`
