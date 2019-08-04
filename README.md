@@ -1,7 +1,8 @@
 QueryString To JSON
 =========
 
-QueryString to JSON parser. One that helps in keeping the integers and float intact automatically. Works for simple query strings where every element is used just once.
+QueryString to JSON parser. One that helps in keeping the integers and float intact automatically. Works for simple query strings where every element is used just once. Specially useful when you want to validate the querystring part of url as no conversion is required for int (positive and negetive values) and float. 
+
 
 ## Installation
 
@@ -35,7 +36,7 @@ QueryString to JSON parser. One that helps in keeping the integers and float int
 
 
 	var queryStringToJson = require('@mydoclaw/querystring-json');
-	var output = queryStringToJson("?search=india&value=1&balance=99.9&apikey=applekeyy");
+	var output = queryStringToJson("?search=india&value=1&balance=99.9&apikey=applekey");
 	console.log(output);
 		
 	output should be {"search": "india","value":1,"balance":99.9,"apikey": "applekey"}
