@@ -63,6 +63,11 @@ QueryString to JSON parser. One that helps in keeping the integers and float int
 	});
 
 	server.listen(8000);
+	
+	Test with URL https://{hostname}:{port}?query1=myquery&query2=123&query3=9.99
+				  http://{hostname}:{port}?query1=myquery&query2=123&query3=9.99	
+	
+	output should be  {"query1": "myquery","query2":123,"query3":9.99}
 
 
 ## Contributing
