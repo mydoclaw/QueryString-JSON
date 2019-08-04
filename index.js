@@ -30,7 +30,7 @@ function queryStringToJson(stringData)
 
             }else{
               //not valid number 
-                jsonString=jsonString+"\""+arraysplit[0]+"\": \""+arraysplit[1]+"\"";
+                jsonString=jsonString+"\""+arraysplit[0]+"\":\""+arraysplit[1]+"\"";
 
             }
           
